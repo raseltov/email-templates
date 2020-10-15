@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
+    <!-- CSS Reset : BEGIN -->
+    <style>
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            background: #f1f1f1;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+        a {
+            text-decoration: none;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        *[x-apple-data-detectors],
+        /* iOS */
+        .unstyle-auto-detected-links *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+
+        /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+        .im {
+            color: inherit !important;
+        }
+
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img+div {
+            display: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            u~div .email-container {
+                min-width: 320px !important;
+            }
+        }
+
+        /* iPhone 6, 6S, 7, 8, and X */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            u~div .email-container {
+                min-width: 375px !important;
+            }
+        }
+
+        /* iPhone 6+, 7+, and 8+ */
+        @media only screen and (min-device-width: 414px) {
+            u~div .email-container {
+                min-width: 414px !important;
+            }
+        }
+    </style>
+
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+        .primary {
+            background: #f3a333;
+        }
+
+        .bg_white {
+            background: #ffffff;
+        }
+
+        .bg_light {
+            background: #fafafa;
+        }
+
+        .bg_black {
+            background: #000000;
+        }
+
+        .bg_dark {
+            background: rgba(0, 0, 0, .8);
+        }
+
+        .email-section {
+            padding: 2.5em;
+        }
+
+        /*BUTTON*/
+        .btn {
+            padding: 10px 15px;
+        }
+
+        .btn.btn-primary {
+            border-radius: 30px;
+            background: #f3a333;
+            color: #ffffff;
+        }
+
+
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Roboto', sans-serif;
+            color: #000000;
+            margin-top: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 1.4;
+            color: rgba(0, 0, 0, .4);
+        }
+
+        a {
+            color: #f3a333;
+        }
+
+        table {}
+
+        /*LOGO*/
+
+        .logo h1 {
+            margin: 0;
+        }
+
+        .logo h1 a {
+            color: #000;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /*HERO*/
+        .hero {
+            position: relative;
+        }
+
+        .hero img {}
+
+        .hero .text {
+            color: rgba(255, 255, 255, .8);
+        }
+
+        .hero .text h2 {
+            color: #ffffff;
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+
+
+        /*HEADING SECTION*/
+        .heading-section {}
+
+        .heading-section h2 {
+            color: #000000;
+            font-size: 28px;
+            margin-top: 0;
+            line-height: 1.4;
+        }
+
+        .heading-section .subheading {
+            margin-bottom: 20px !important;
+            display: inline-block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(0, 0, 0, .4);
+            position: relative;
+        }
+
+        .heading-section .subheading::after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: #f3a333;
+            margin: 0 auto;
+        }
+
+        .heading-section-white {
+            color: rgba(255, 255, 255, .8);
+        }
+
+        .heading-section-white h2 {
+            font-size: 28px;
+            font-family:
+                line-height: 1;
+            padding-bottom: 0;
+        }
+
+        .heading-section-white h2 {
+            color: #ffffff;
+        }
+
+        .heading-section-white .subheading {
+            margin-bottom: 0;
+            display: inline-block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, .4);
+        }
+
+
+        .icon {
+            text-align: center;
+        }
+
+        .icon img {}
+
+
+        /*SERVICES*/
+        .text-services {
+            padding: 10px 10px 0;
+            text-align: center;
+        }
+
+        .text-services h3 {
+            font-size: 20px;
+        }
+
+        /*BLOG*/
+        .text-services .meta {
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        /*TESTIMONY*/
+        .text-testimony .name {
+            margin: 0;
+        }
+
+        .text-testimony .position {
+            color: rgba(0, 0, 0, .3);
+
+        }
+
+
+        /*VIDEO*/
+        .img {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+        .img .icon {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin-top: -25px;
+        }
+
+        .img .icon a {
+            display: block;
+            width: 60px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -25px;
+        }
+
+
+
+        /*COUNTER*/
+        .counter-text {
+            text-align: center;
+        }
+
+        .counter-text .num {
+            display: block;
+            color: #ffffff;
+            font-size: 34px;
+            font-weight: 700;
+        }
+
+        .counter-text .name {
+            display: block;
+            color: rgba(255, 255, 255, .9);
+            font-size: 13px;
+        }
+
+
+        /*FOOTER*/
+
+        .footer {
+            color: rgba(255, 255, 255, .5);
+
+        }
+
+        .footer .heading {
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        .footer ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer ul li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            color: rgba(255, 255, 255, 1);
+        }
+
+
+        @media screen and (max-width: 500px) {
+
+            .icon {
+                text-align: left;
+            }
+
+            .text-services {
+                padding-left: 0;
+                padding-right: 20px;
+                text-align: left;
+            }
+
+        }
+
+        table {
+            border-collapse: separate;
+        }
+
+        a,
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: #00788a;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h2,
+        h2 a,
+        h2 a:visited,
+        h3,
+        h3 a,
+        h3 a:visited,
+        h4,
+        h5,
+        h6,
+        .t_cht {
+            color: #000 !important;
+        }
+
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td {
+            line-height: 100%;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+    </style>
+
+
+</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
+    <center style="width: 100%; margin: 0; padding: 0 !important;  background-color: #F1EEEE;">
+        <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+            <!-- BEGIN BODY -->
+            <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">F&uuml;r unseren Kunden Telefonica setzen wir ab
+                sofort ein neues Langzeit-Projekt auf. Mit euch!</span>
+
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                    <tr>
+                        <td width="30%" valign="middle">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="padding: 2em 0;">
+                                            <a href="https://www.yoummday.com" target="_blank" style="color: #e95c07; text-decoration: none;"><img src="https://assets.yoummday.com/logos/signature.png?newsletter=%userid%" alt="Yoummday"
+                                                    style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td width="70%" valign="middle">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #EB6608; background: linear-gradient(45deg, #CD470A 0%, #EB6608 100%); color: #fff;" width="100%">
+                <tr>
+                    <td class="wrapper" style="font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 34px 24px 24px;" valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                            <tr>
+                                <td style="vertical-align: top;" valign="top">
+                                    <h1 style="font-family: 'Roboto Bold', sans-serif; font-weight:bold; line-height: 1.4; margin: 0; font-size: 24px; margin-bottom: 28px; text-transform: uppercase; text-align:center; color: #fff;">
+                                        Mitmachen und Provision erh&ouml;hen!
+                                    </h1>
+                                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td style="text-align: center; padding: 0 3em;"><img src="https://www.yoummday.com/newsletter_assets/tefrecruiting/header.png"
+                                                    style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;" /></td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                    <h2 style="font-family: 'Roboto Bold', sans-serif; font-weight: bold; line-height: 1.4; margin: 0; font-size: 18px; margin-bottom: 24px; text-transform: uppercase; text-align:center; color: #fff;">
+                                        Hallo Yoummday Sales-Talents
+                                    </h2>
+                                    <p style="font-size: 18px; font-weight: normal; margin: 0; margin-bottom: 30px; color: #fff;">
+                                        F&uuml;r unseren Kunden Telefonica setzen wir ab sofort ein neues Langzeit-Projekt auf. Mit euch! 5G wird der Mobilfunkstandard der Zukunft, davon habt ihr vielleicht geh&ouml;rt. Um alle bestehenden Kunden
+                                        dar&uuml;ber zu informieren, was dies f&uuml;r Sie bedeutet, suchen wir <span style="font-family: 'Roboto Bold', sans-serif; font-weight:bold; color:#244669;">ab sofort</span> Talents, die mindestens <span
+                                            style="font-family: 'Roboto Bold', sans-serif; font-weight:bold;">20 Stunden pro Woche</span> Zeit haben. Oder mehr :-) Also meldet euch bitte sofort!
+                                    </p>
+                                    <table border="0" cellpadding="0" cellspacing="0" class="btn" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box; min-width: 100% !important;"
+                                        width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td align="center" style="vertical-align: top; padding-bottom: 16px;" valign="top">
+                                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="vertical-align: top; border-radius: 28px; text-align: center;" valign="top" align="center">
+                                                                    <a href="https://discord.gg/u2PVJ4b" target="_blank"
+                                                                        style="display: inline-block; color: #EB6608; background-color: #ffffff; border: solid 1px #ffffff; border-radius: 28px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 16px; font-family: 'Roboto Bold', sans-serif; text-transform: uppercase; margin: 0; padding: 12px 24px; border-color: #ffffff;">
+                                                                        Hier teilnehmen!
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="main" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #fff; color: #244669;" width="100%">
+                <tr>
+                    <td class="wrapper" style="vertical-align: top; box-sizing: border-box; padding: 28px 24px 0;" valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                            <tr>
+                                <td style="vertical-align: top;" valign="top">
+                                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td style="text-align: center"><img src="https://www.yoummday.com/newsletter_assets/tefrecruiting/1.png" style="margin-bottom:15px;" width="45" height="45" /></td>
+                                        </tr>
+                                    </table>
+                                    <h2 style="font-family: 'Roboto Bold', sans-serif;  line-height: 1.4; margin: 0; font-size: 18px; margin-bottom: 24px; text-transform: uppercase; text-align:center;color: #244669;">
+                                        Tolle Boni und Pr&auml;mien
+                                    </h2>
+                                    <p style="font-size: 18px; font-weight: normal; margin: 0; margin-bottom: 16px;color: #244669;">
+                                        Die yoummday Teammanager haben sich tolle Boni und Pr&auml;mien
+                                        einfallen lassen und mit jedem Monat, die Du l&auml;nger im Team
+                                        bist, steigern sie sich! Der Top Stundensatz bei yoummday ist ja
+                                        ohnehin bekannt.
+                                    </p>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                                        <tr>
+                                            <td style="padding:0 3em;">
+                                                <img src="https://www.yoummday.com/newsletter_assets/tefrecruiting/man_in_circle.png" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #EB6608; color: #fff;" width="100%">
+                <tr>
+                    <td class="wrapper" style="font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 34px 24px 24px;" valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                            <tr>
+                                <td style="vertical-align: top;" valign="top">
+                                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td style="text-align: center"><img src="https://www.yoummday.com/newsletter_assets/tefrecruiting/2.png" style="margin-bottom:15px;" width="45" height="45" /></td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td width="48%" style="vertical-align: top;" valign="top">
+                                                <h2 style="font-family: 'Roboto Bold', sans-serif;  line-height: 1.4; margin: 0; font-size: 18px; margin-bottom: 12px; text-transform: uppercase; color: #fff;">
+                                                    Dein Ticket!
+                                                </h2>
+                                                <p style="font-size: 18px; font-weight: normal; margin: 0; margin-bottom: 30px; color: #fff;">
+                                                    Das erste Special gibt es gleich
+                                                    zu Beginn: Dein Ticket zum
+                                                    Verkaufserfolg! Qualifiziere Dich
+                                                    im Blitz-Interview und erhalte
+                                                    Deinen Code um loszulegen!
+                                                </p>
+                                            </td>
+                                            <td width="52%" style="vertical-align: top;" valign="top">
+                                                <img src="https://www.yoummday.com/newsletter_assets/tefrecruiting/ticket.png" style="width: 100%; max-width: 300px; height: auto; margin: auto; display: block;" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="main" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #fff; color: #244669;" width="100%">
+                <tr>
+                    <td class="wrapper" style="vertical-align: top; box-sizing: border-box; padding: 28px 24px 0;" valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                            <tr>
+                                <td style="vertical-align: top;" valign="top">
+                                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td style="text-align: center"><img src="https://www.yoummday.com/newsletter_assets/tefrecruiting/3.png" style="margin-bottom:15px;" width="45" height="45" /></td>
+                                        </tr>
+                                    </table>
+                                    <h2 style="font-family: 'Roboto Bold', sans-serif;  line-height: 1.4; margin: 0; font-size: 18px; margin-bottom: 24px; text-transform: uppercase; text-align:center;color: #244669;">
+                                        199€ Training geschenkt
+                                    </h2>
+                                    <p style="font-size: 18px; font-weight: normal; margin: 0; margin-bottom: 28px;color: #244669;">
+                                        Mit dem Code nimmst Du an einem speziell entwickelten und erfolgreich getesteten Online Gespr&auml;chstraining unserer YoumCademy im Wert von 199€ teil. Die Teilnahme daran ist die Basis, um Deine
+                                        Provisionen jeden Monat zu erh&ouml;hen - Das ist super fair, oder?
+                                    </p>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                                        <tr>
+                                            <td style="padding:0 3em;">
+                                                <img src="https://www.yoummday.com/newsletter_assets/tefrecruiting/yoummcademy_on_screen.png" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="main" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; color: #fff; background: #244669;" width="100%">
+                <tr>
+                    <td class="wrapper" style="vertical-align: top; box-sizing: border-box; padding: 28px 24px 0;" valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                            <tr>
+                                <td style="vertical-align: top;" valign="top">
+                                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td style="text-align: center"><img src="https://www.yoummday.com/newsletter_assets/tefrecruiting/4.png" style="margin-bottom:15px;" width="45" height="45" /></td>
+                                        </tr>
+                                    </table>
+                                    <h2 style="font-family: 'Roboto Bold', sans-serif;  line-height: 1.4; margin: 0; font-size: 18px; margin-bottom: 24px; text-transform: uppercase; text-align:center;color: #fff;">
+                                        Melde dich an!
+                                    </h2>
+                                    <p style="font-size: 18px; font-weight: normal; margin: 0; margin-bottom: 32px;color: #fff;">
+                                        Melde Dich sofort zum Blitz-Interview an, um Deinen Corona-sicheren Job im Home Office zu bekommen.<br>
+                                        <br>
+                                        Hier ist Dein Eingang zu unserem Discord-Team:
+                                    </p>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                                        <tr>
+                                            <td style="padding:0 8em 0 5.5em;">
+                                                <img src="https://www.yoummday.com/newsletter_assets/tefrecruiting/blitz_interview.png" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #EB6608; color: #fff;" width="100%">
+                <tr>
+                    <td class="wrapper" style="font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 34px 24px 24px;" valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                            <tr>
+                                <td style="vertical-align: top;" valign="top">
+                                    <table border="0" cellpadding="0" cellspacing="0" class="btn" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box; min-width: 100% !important;"
+                                        width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td align="center" style="vertical-align: top; padding-bottom: 16px;" valign="top">
+                                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="vertical-align: top; border-radius: 28px; text-align: center;" valign="top" align="center">
+                                                                    <a href="https://discord.gg/u2PVJ4b" target="_blank"
+                                                                        style="display: inline-block; color: #EB6608; background-color: #ffffff; border: solid 1px #ffffff; border-radius: 28px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 16px; font-family: 'Roboto Bold', sans-serif; font-weight:bold; text-transform: uppercase; margin: 0; padding: 12px 24px; border-color: #ffffff;">
+                                                                        Hier teilnehmen!
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <div style="clear: both; padding-top: 24px; width: 100%;">
+                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                    <tr>
+                        <td class="content-block" style="vertical-align: top; padding-top: 0; padding-bottom: 24px; font-size: 12px; color: #244669; text-align: center;" valign="top" align="center">
+                            Copyright &copy; 2020 Yoummday GmbH<br>
+                            <a class="apple-link" href="https://www.yoummday.com/de/unternehmen/impressum/" target="_blank" style="color: #e95c07; text-decoration: none;">Impressum</a> |
+                            <a class="apple-link" href="https://www.yoummday.com/de/rechtliches/agb-fuer-talente/" target="_blank" style="color: #e95c07; text-decoration: none;">AGB</a> |
+                            <a class="apple-link" href="https://www.yoummday.com/de/rechtliches/datenschutzinformation-art-12ff-ds-gvo/" target="_blank" style="color: #e95c07; text-decoration: none;">Datenschutz</a>
+                            <br><br>
+                            info@yoummday.com<br>
+                            <a class="apple-link" href="https://www.yoummday.com/" target="_blank" style="color: #e95c07; text-decoration: none;">www.yoummday.com</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="content-block" style="vertical-align: top; padding-top: 0; padding-bottom: 24px; font-size: 12px; color: #244669;" valign="top">
+                            Du hast den Newsletter auf yoummday.com bei Deiner Registrierung als Talent abonniert.<br>
+                            Solltest Du kein Interesse am Erhalt von weiteren Newslettern haben, melde Dich bitte in Deinen Account-Einstellungen f&uuml;r den Erhalt vom Newsletter ab.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </center>
+</body>
+
+</html>
