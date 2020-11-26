@@ -1,7 +1,6 @@
 Hallo liebes Yoummday-Talent,
 
-
-wir haben eine neues interessantes Projekt für Dich!
+wir vermissen dich! Du warst lange nicht mehr auf Yoummday aktiv. Dabei haben wir ein neues spannendes Projekt von %company% für Dich. Alle aktuellen Details findest du hier.
 
 Projektbeschreibung:
 %description%
