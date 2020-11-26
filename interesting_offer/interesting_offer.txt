@@ -1,4 +1,4 @@
-Hallo liebes Yoummday-Talent,
+Hallo %name%,
 
 wir vermissen dich! Du warst lange nicht mehr auf Yoummday aktiv. Dabei haben wir ein neues spannendes Projekt von %company% für Dich. Alle aktuellen Details findest du hier.
 
